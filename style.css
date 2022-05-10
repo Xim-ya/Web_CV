@@ -1,0 +1,147 @@
+:root {
+  /* Font size  */
+  /* Desktop */
+  --extra-large: 48px;
+  --large: 36px;
+  --medium: 22px;
+  --regular: 20px;
+  --small: 18px;
+  --extra-samll: 14px;
+
+  /* Font Weight */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  /* Layout Size  */
+  --gap-extra-large: 96px;
+  --vertical-gap-large: 76px;
+  --vertical-gap-regular: 62px;
+  --vertical-gap-small: 24px;
+
+  /* Color */
+  --main-color: #f9cb81;
+  --black-color: #2a2c2e;
+  --hightlight-color: #faf6f1;
+  --light-grey-color: #6a6b6d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  text-decoration: none !important;
+  color: inherit;
+}
+
+body {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+/* Global 1,2*/
+
+/* 1) Section & Section Title  */
+section {
+  margin-top: var(--vertical-gap-regular);
+}
+
+.section-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--vertical-gap-regular);
+}
+
+.section-title h1 {
+  font-size: var(--large);
+  color: #000;
+}
+
+.section-title span {
+  background-color: var(--hightlight-color);
+  display: block;
+  bottom: 4px;
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  z-index: -1;
+}
+
+/* 2) Section Content List Item  */
+section li {
+  color: var(--black-color);
+  font-size: var(--regular);
+  font-weight: var(--weight-regular);
+  line-height: 200%;
+  margin-left: 1em;
+}
+
+/* Nav & Intro Section */
+.my-self {
+  background-color: aqua;
+  margin-right: 2rem;
+}
+
+.intro-title {
+  font-size: var(--extra-large);
+  color: var(--main-color);
+}
+
+.intro-title strong {
+  color: var(--light-grey-color);
+  font-size: 30px;
+  font-weight: var(--weight-medium);
+}
+
+/* Myself Section */
+
+.my-self .section-title {
+  margin-bottom: 24px;
+}
+
+/* Contact Section */
+
+.contact {
+  font-size: var(--regular);
+  background-color: rebeccapurple;
+  min-width: 400px;
+}
+
+.contact .section-title {
+  margin-bottom: var(--vertical-gap-small);
+}
+
+.contact.content-list li {
+  display: flex;
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.content-list-icon {
+  height: 36px;
+  width: 36px;
+  display: block;
+  margin-right: 16px;
+}
+
+.location {
+  background: url("/assets/location_ic.svg");
+}
+
+.phone {
+  background: url("/assets/phone_ic.svg");
+}
+
+.email {
+  background: url("/assets/email_ic.svg");
+}
+
+.github {
+  background: url("/assets/github_ic.svg");
+}
