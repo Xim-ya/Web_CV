@@ -1,29 +1,33 @@
 :root {
   /* Font size  */
   /* Desktop */
-  --extra-large: 48px;
-  --large: 36px;
-  --medium: 22px;
-  --regular: 20px;
-  --small: 18px;
-  --extra-samll: 14px;
+  --extra-large: 4.8rem; /* 4*/
+  --large: 3.6rem;
+  --medium: 2.2rem;
+  --regular: 2rem;
+  --small: 1.8rem;
+  --extra-samll: 1.4rem;
 
   /* Font Weight */
+  --weight-thin: 300;
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-bold: 700;
 
   /* Layout Size  */
-  --gap-extra-large: 96px;
-  --vertical-gap-large: 76px;
-  --vertical-gap-regular: 62px;
-  --vertical-gap-small: 24px;
+  --gap-extra-large: 9.6rem;
+  --vertical-gap-large: 7.6rem;
+  --vertical-gap-regular: 6.2rem;
+  --vertical-gap-small: 2.4rem;
+
+  --contatc-icon-size: 3.6rem;
 
   /* Color */
   --main-color: #f9cb81;
   --black-color: #2a2c2e;
   --hightlight-color: #faf6f1;
-  --light-grey-color: #6a6b6d;
+  --dark-grey-color: #6a6b6d;
+  --light-grey-color: #dedede;
 }
 
 * {
@@ -35,9 +39,15 @@
   color: inherit;
 }
 
+html {
+  font-size: 62.5%; /* 10px */
+}
+
 body {
   max-width: 1110px;
+  height: 4000px;
   margin: 0 auto;
+  border: 1px solid red;
 }
 
 /* Global 1,2*/
@@ -79,38 +89,38 @@ section li {
   font-size: var(--regular);
   font-weight: var(--weight-regular);
   line-height: 200%;
-  margin-left: 1em;
 }
 
 /* Nav & Intro Section */
-.my-self {
-  background-color: aqua;
-  margin-right: 2rem;
-}
-
 .intro-title {
   font-size: var(--extra-large);
   color: var(--main-color);
 }
 
 .intro-title strong {
-  color: var(--light-grey-color);
-  font-size: 30px;
+  color: var(--dark-grey-color);
+  font-size: 3rem;
   font-weight: var(--weight-medium);
 }
 
 /* Myself Section */
+.my-self {
+  font-size: var(--regular);
+  margin-right: 8rem;
+}
+
+.my-self .content-list {
+}
 
 .my-self .section-title {
-  margin-bottom: 24px;
+  margin-bottom: var(--vertical-gap-small);
 }
 
 /* Contact Section */
-
 .contact {
   font-size: var(--regular);
-  background-color: rebeccapurple;
-  min-width: 400px;
+  display: block;
+  width: 100%;
 }
 
 .contact .section-title {
@@ -123,25 +133,111 @@ section li {
   margin-bottom: 34px;
 }
 
-.content-list-icon {
-  height: 36px;
-  width: 36px;
+.contact .content-list img {
+  height: var(--contatc-icon-size);
+  width: var(--contatc-icon-size);
   display: block;
   margin-right: 16px;
 }
 
-.location {
-  background: url("/assets/location_ic.svg");
+/* Learning Journey Section */
+
+.journey-horizontal-line {
+  height: 4px;
+  width: 100%;
+  background-color: var(--main-color);
 }
 
-.phone {
-  background: url("/assets/phone_ic.svg");
+.journey .content-list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
-.email {
-  background: url("/assets/email_ic.svg");
+.journey .content-list .bullet {
+  height: 18px;
+  width: 18px;
+  margin-bottom: 10px;
+  display: block;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  transform: translateY(-50%);
 }
 
-.github {
-  background: url("/assets/github_ic.svg");
+.journey .content-list li {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journey .content-list img {
+  height: 3.3rem;
+  width: 3.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.journey .content-list h2 {
+  font-size: var(--medium);
+  font-weight: var(--weight-bold);
+  color: #000;
+}
+
+.journey .content-list span:nth-child(4) {
+  font-size: var(--extra-samll);
+  color: var(--light-grey-color);
+  line-height: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.journey .content-list p {
+  font-size: 18px;
+  font-weight: var(--weight-thin);
+  color: var(--black-color);
+  line-height: 137%;
+}
+
+/* Experience */
+.experience .content-list {
+  list-style: none;
+}
+
+.experience .content-list h1 {
+  font-size: 2.4rem;
+  font-weight: var(--medium);
+  line-height: 3.05rem;
+  letter-spacing: 2%;
+}
+
+.experience .content-list .description {
+  display: flex;
+  align-items: center;
+}
+
+.experience .content-list .description img {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.experience .content-list-detail.leading-info h2 {
+  font-size: var(--regular);
+  color: var(--dark-grey-color);
+  line-height: 140%;
+  font-weight: var(--weight-medium);
+  background-color: red;
+}
+
+.experience .content-list-detail.leading-info span {
+  font-size: var(--extra-samll);
+  font-weight: var(--weight-thin);
+  background-color: blue;
+}
+
+.experience .content-list-detail .content-list li {
+  list-style: inside;
+  background-color: yellow;
+}
+
+h2 {
 }
