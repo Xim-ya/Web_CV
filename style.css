@@ -86,12 +86,11 @@ section {
 /* 2) Section Content List Item  */
 section li {
   color: var(--black-color);
-  font-size: var(--regular);
   font-weight: var(--weight-regular);
   line-height: 200%;
 }
 
-/* Nav & Intro Section */
+/*** Nav & Intro Section ***/
 .intro-title {
   font-size: var(--extra-large);
   color: var(--main-color);
@@ -103,20 +102,21 @@ section li {
   font-weight: var(--weight-medium);
 }
 
-/* Myself Section */
+/*** Myself Section ***/
 .my-self {
   font-size: var(--regular);
   margin-right: 8rem;
 }
 
 .my-self .content-list {
+  margin-left: 1em;
 }
 
 .my-self .section-title {
   margin-bottom: var(--vertical-gap-small);
 }
 
-/* Contact Section */
+/*** Contact Section ***/
 .contact {
   font-size: var(--regular);
   display: block;
@@ -140,7 +140,7 @@ section li {
   margin-right: 16px;
 }
 
-/* Learning Journey Section */
+/*** Learning Journey Section ***/
 
 .journey-horizontal-line {
   height: 4px;
@@ -197,9 +197,13 @@ section li {
   line-height: 137%;
 }
 
-/* Experience */
+/*** Experience ***/
 .experience .content-list {
   list-style: none;
+}
+
+.experience .content-item {
+  margin-bottom: 9rem;
 }
 
 .experience .content-list h1 {
@@ -207,11 +211,21 @@ section li {
   font-weight: var(--medium);
   line-height: 3.05rem;
   letter-spacing: 2%;
+  margin-bottom: 1rem;
 }
 
 .experience .content-list .description {
   display: flex;
   align-items: center;
+  margin-bottom: 2.6rem;
+}
+
+.experience .content-list .description span {
+  font-size: var(--small);
+  font-weight: var(--medium);
+  line-height: 2.3rem;
+  letter-spacing: 0.02em;
+  color: var(--black-color);
 }
 
 .experience .content-list .description img {
@@ -220,24 +234,102 @@ section li {
   margin-right: 1rem;
 }
 
-.experience .content-list-detail.leading-info h2 {
+.experience .content-list-detail {
+  display: flex;
+}
+
+.experience .content-list-detail-leading-info {
+  /* Postion & Date Wrapper */
+  min-width: 20rem;
+  margin-right: 4%;
+}
+
+.experience .content-list-detail-leading-info h2 {
+  /* Position */
   font-size: var(--regular);
   color: var(--dark-grey-color);
   line-height: 140%;
   font-weight: var(--weight-medium);
-  background-color: red;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.4rem;
 }
 
-.experience .content-list-detail.leading-info span {
+.experience .content-list-detail-leading-info span {
+  /* Date */
   font-size: var(--extra-samll);
   font-weight: var(--weight-thin);
-  background-color: blue;
+  color: var(--dark-grey-color);
+  opacity: 0.7;
+  line-height: 140%;
 }
 
-.experience .content-list-detail .content-list li {
+.experience .content-list-details {
+  width: 100%;
+}
+
+.experience .content-list-details li {
+  /* Experience Detail */
+  font-size: var(--small);
+  font-weight: var(--weight-thin);
+  line-height: 200%;
+  color: var(--black-color);
   list-style: inside;
-  background-color: yellow;
+  width: 100%;
+  text-align: left;
 }
 
-h2 {
+.experience .content-list-details ul {
+  /* Experience Detail > ul */
+  margin-left: 2em;
+  display: inline-block;
+}
+
+/*** Skillset Section ***/
+.skillset {
+  width: 50%;
+  margin-right: 1.2rem;
+}
+
+.skillset ul {
+  list-style-type: none;
+}
+
+.skillset li span {
+  display: block;
+}
+
+.skillset li span:nth-child(1) {
+  font-weight: var(--weight-regular);
+  font-size: 2.6rem;
+  line-height: 2.7rem;
+  color: var(--black-color);
+  list-style-type: none;
+  margin-bottom: 0.3rem;
+}
+
+.skillset li span:nth-child(2) {
+  font-size: medium;
+  color: var(--black-color);
+  font-weight: var(--weight-thin);
+  line-height: 140%;
+  margin-bottom: 2.8rem;
+}
+
+/*** Mindset Section ***/
+.mindset {
+  width: 50%;
+}
+
+.mindset img {
+  height: 50rem;
+  position: absolute;
+  z-index: -2;
+}
+
+.mindset ul {
+  position: relative;
+  top: 6rem;
+  left: 6rem;
+  z-index: 10;
 }
