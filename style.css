@@ -92,16 +92,29 @@ section li {
 
 /*** Nav & Intro Section ***/
 nav {
+  background-color: var(--main-color);
+  position: fixed;
+  height: 6rem;
+  width: 100vw;
+  top: -6rem;
+  left: 0;
+  transition: top 0.3s;
+  z-index: 1;
 }
 
 nav .nav-box {
+  display: block;
+  height: 6rem;
+  max-width: 1110px;
+  padding: 0px 20px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 nav a {
-  color: var(--dark-grey-color);
+  color: #fff;
   font-size: large;
 }
 

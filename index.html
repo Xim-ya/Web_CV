@@ -13,7 +13,7 @@
     <title>CV</title>
   </head>
   <body>
-    <nav>
+    <nav id="navbar">
       <div class="nav-box">
         <img src="/assets/main_logo.png" alt="logo" />
         <div>
@@ -418,5 +418,22 @@
         </p>
       </section>
     </section>
+
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-6rem";
+        }
+      }
+    </script>
   </body>
 </html>
