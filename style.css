@@ -19,7 +19,6 @@
   --vertical-gap-large: 7.6rem;
   --vertical-gap-regular: 6.2rem;
   --vertical-gap-small: 2.4rem;
-
   --contatc-icon-size: 3.6rem;
 
   /* Color */
@@ -209,6 +208,7 @@ nav a:nth-child(1) {
 
 .contact.content-list li {
   display: flex;
+  align-items: start;
   margin: 0;
   margin-bottom: 3.4rem;
 }
@@ -228,6 +228,10 @@ nav a:nth-child(1) {
 
   .my-self {
     margin-right: 0px;
+  }
+
+  .contact.content-list li {
+    align-items: center;
   }
 }
 
@@ -571,4 +575,9 @@ nav a:nth-child(1) {
   .etc {
     width: 40%;
   }
+}
+
+.hits {
+  float: right;
+  margin-bottom: 2rem;
 }
