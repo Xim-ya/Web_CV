@@ -579,5 +579,6 @@ nav a:nth-child(1) {
 
 .hits {
   float: right;
+  display: block;
   margin-bottom: 2rem;
 }
